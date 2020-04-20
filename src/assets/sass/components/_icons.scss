@@ -1,0 +1,60 @@
+.icon {
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &--larger {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  &--large {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  &--medium {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  &--small {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+
+  &--black {
+    fill: $color-grey-darker;
+  }
+
+  &--white {
+    fill: $color-grey-light;
+  }
+
+  &--blue {
+    fill: $color-primary;
+  }
+
+  &--white-blue {
+    fill: $color-grey-light;
+
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+
+  &--blue-white {
+    fill: $color-primary;
+
+    &:hover {
+      fill: $color-grey-light;
+    }
+  }
+
+  &--black-blue {
+    fill: $color-grey-darker;
+
+    &:hover {
+      fill: $color-primary;
+    }
+  }
+}

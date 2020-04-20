@@ -1,6 +1,6 @@
 // React
 import React from "react";
-import { Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 // Components
 import Home from "./pages/Home/Home";
@@ -12,13 +12,13 @@ import "./assets/css/style.css";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/forgetmenot" component={ForgetMeNot} />
         <Route path="/*" component={UndefinedPage} />
       </Switch>
-    </Router>
+    </BrowserRouter>
   );
 }
 

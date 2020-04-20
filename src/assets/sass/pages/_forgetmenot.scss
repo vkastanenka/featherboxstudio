@@ -1,0 +1,101 @@
+.header {
+  &--game {
+    height: 70vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    &__logo {
+      height: 20%;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    &__kickstarter {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      background-color: rgba($color-white, 0.5);
+      border-radius: 10px;
+
+    }
+  }
+}
+
+.gallery {
+  padding: $section-padding;
+  background-image: $polkadot-bg;
+
+  &__content {
+    padding: 2rem 0;
+    background-color: $color-white;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__images {
+    display: flex;
+  }
+
+  &__image {
+    width: 1.92rem;
+    height: 1.08rem;
+    margin: 0rem 5rem;
+
+    // TODO:
+    background-color: lightpink;
+  }
+
+  &__cast-container {
+    height: 30vh;
+  }
+
+  &__cast {
+    height: 100%;
+  }
+}
+
+.game-details {
+  padding: $section-padding;
+  background-image: $polkadot-bg;
+
+  &__content {
+    padding: 2rem 0;
+    background-color: $color-white;
+
+    display: flex;
+  }
+
+  &__game-description {
+    flex-basis: 70%;
+    padding: 0 5rem;
+  }
+
+  &__details {
+    flex-basis: 30%;
+    padding: 0 2rem;
+  }
+}
+
+.characters {
+  padding: $section-padding;
+  background-image: $polkadot-bg;
+
+  &__content {
+    padding: 2rem 5rem;
+    background-color: $color-white;
+  }
+
+  &__character {
+    display: flex;
+    align-items: center;
+  }
+
+  &__character-profile {
+    height: 40rem;
+  }
+}

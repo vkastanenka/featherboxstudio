@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+.team-member__photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+li {
+  list-style: none; }
+
+body {
+  line-height: 1.6;
+  font-weight: 400;
+  color: #222;
+  font-size: 1.6rem;
+  font-family: "Lato", sans-serif; }
+
+a {
+  text-decoration: none;
+  color: #222; }
+
+.heading--secondary {
+  font-size: 4rem; }
+
+.heading--tertiary {
+  font-size: 3rem; }
+
+.heading--quaternary {
+  font-size: 2.4rem;
+  font-weight: 400; }
+
+.text--largest {
+  font-size: 2.2rem; }
+
+.text--larger {
+  font-size: 2rem; }
+
+.text--large {
+  font-size: 1.8rem; }
+
+.text--small {
+  font-size: 1.4rem; }
+
+.text--smaller {
+  font-size: 1.2rem; }
+
+.text--bold {
+  font-weight: 600; }
+
+.text--light {
+  font-weight: 300; }
+
+.text--italic {
+  font-style: italic; }
+
+.text--dancing {
+  font-family: "Dancing Script", cursive; }
+
+.text--grey {
+  color: #888; }
+
+.hover-basic {
+  transition: all 0.3s; }
+  .hover-basic:hover {
+    transform: translateY(-2px); }
+  .hover-basic:active {
+    transform: translateY(2px); }
+
+.hover-shadows {
+  transition: all 0.3s;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4); }
+  .hover-shadows:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.2); }
+  .hover-shadows:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6); }
+
+.bg-video {
+  height: 100%;
+  position: relative; }
+  .bg-video__content {
+    height: 100%; }
+
+.heading {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 8vh;
+  background-color: #dcf1ff; }
+  .heading__text {
+    flex-basis: 40%; }
+  .heading__flowers {
+    height: inherit;
+    flex-basis: 30%;
+    background-image: linear-gradient(rgba(97, 172, 214, 0.6), rgba(131, 204, 237, 0.6)), url("../images/flower-background.png");
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .heading__flowers--left {
+      background-position: top;
+      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%); }
+    .heading__flowers--right {
+      background-position: bottom;
+      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); }
+
+.icon {
+  transition: all 0.3s;
+  cursor: pointer; }
+  .icon--larger {
+    height: 3rem;
+    width: 3rem; }
+  .icon--large {
+    height: 2rem;
+    width: 2rem; }
+  .icon--medium {
+    height: 1.75rem;
+    width: 1.75rem; }
+  .icon--small {
+    height: 1.5rem;
+    width: 1.5rem; }
+  .icon--black {
+    fill: #222; }
+  .icon--white {
+    fill: #f7f7f7; }
+  .icon--blue {
+    fill: #83cced; }
+  .icon--white-blue {
+    fill: #f7f7f7; }
+    .icon--white-blue:hover {
+      fill: #83cced; }
+  .icon--blue-white {
+    fill: #83cced; }
+    .icon--blue-white:hover {
+      fill: #f7f7f7; }
+  .icon--black-blue {
+    fill: #222; }
+    .icon--black-blue:hover {
+      fill: #83cced; }
+
+.team-member {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; }
+  .team-member__info, .team-member__contact {
+    flex-basis: 50%;
+    text-align: center; }
+  .team-member__info {
+    border-radius: 10px; }
+  .team-member__photo-container {
+    width: 100%;
+    height: 14rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 10px 10px 0 0; }
+    .team-member__photo-container--kat {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/contact-icon--rena--background.jpg"); }
+    .team-member__photo-container--victoria {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/contact-icon--victoria--background.jpg"); }
+    .team-member__photo-container--evan {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/contact-icon--evan--background.jpg"); }
+  .team-member__photo {
+    height: 90%;
+    border-radius: 50%;
+    border: 2px solid #f7f7f7;
+    padding: 0.3rem; }
+
+.footer {
+  background-color: lightpink;
+  padding: 0 42rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .footer__logo, .footer__contact {
+    display: flex;
+    align-items: center; }
+
+.navbar {
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 42rem; }
+  .navbar > * {
+    display: flex;
+    align-items: center; }
+
+.header--game {
+  height: 70vh;
+  position: relative;
+  display: flex;
+  justify-content: center; }
+  .header--game__logo {
+    height: 20%;
+    position: absolute;
+    top: 1rem;
+    left: 1rem; }
+  .header--game__kickstarter {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px; }
+
+.gallery {
+  padding: 0 42rem;
+  background-image: url("../images/polkadot-background.png"); }
+  .gallery__content {
+    padding: 2rem 0;
+    background-color: #fff; }
+  .gallery__gallery {
+    display: flex;
+    justify-content: space-between; }
+  .gallery__images {
+    display: flex; }
+  .gallery__image {
+    width: 1.92rem;
+    height: 1.08rem;
+    margin: 0rem 5rem;
+    background-color: lightpink; }
+  .gallery__cast-container {
+    height: 30vh; }
+  .gallery__cast {
+    height: 100%; }
+
+.game-details {
+  padding: 0 42rem;
+  background-image: url("../images/polkadot-background.png"); }
+  .game-details__content {
+    padding: 2rem 0;
+    background-color: #fff;
+    display: flex; }
+  .game-details__game-description {
+    flex-basis: 70%;
+    padding: 0 5rem; }
+  .game-details__details {
+    flex-basis: 30%;
+    padding: 0 2rem; }
+
+.characters {
+  padding: 0 42rem;
+  background-image: url("../images/polkadot-background.png"); }
+  .characters__content {
+    padding: 2rem 5rem;
+    background-color: #fff; }
+  .characters__character {
+    display: flex;
+    align-items: center; }
+  .characters__character-profile {
+    height: 40rem; }
+
+.header {
+  text-align: center; }
+  .header__logo {
+    background-color: lightcyan;
+    height: 50vh; }
+
+.current-projects__content {
+  height: 90vh;
+  background-image: linear-gradient(rgba(131, 204, 237, 0.4), rgba(220, 241, 255, 0.4)), url("../images/forgetmenot/main-menu--transparent.png");
+  background-position: top;
+  background-size: cover; }
+
+.current-projects__information {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.current-projects__image {
+  height: 100%;
+  width: 100%; }
+
+.contacts__content {
+  padding: 0 42rem; }

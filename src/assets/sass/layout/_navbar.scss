@@ -1,0 +1,15 @@
+.navbar {
+  // TODO:
+  background-color: lightblue;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: $section-padding;
+
+  & > * {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,14 @@
+.footer {
+  // TODO:
+  background-color: lightpink;
+  padding: $section-padding;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo, &__contact {
+    display: flex;
+    align-items: center;
+  }
+}

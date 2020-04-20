@@ -1,0 +1,43 @@
+.header {
+  text-align: center;
+
+  &__logo {
+    // TODO:
+    background-color: lightcyan;
+
+    height: 50vh;
+  }
+}
+
+.current-projects {
+  &__content {
+    height: 90vh;
+    background-image: linear-gradient(
+        rgba($color-primary, 0.4),
+        rgba($color-primary-light, 0.4)
+      ),
+      url("../images/forgetmenot/main-menu--transparent.png");
+    background-position: top;
+    background-size: cover;
+  }
+
+  &__information {
+    width: 40%;
+    // padding-left: 10rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.contacts {
+  &__content {
+    padding: $section-padding;
+  }
+}
