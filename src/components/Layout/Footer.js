@@ -13,13 +13,22 @@ const Footer = () => {
         <img
           src={require("../../assets/images/featherbox-logo--blue--smaller.png")}
           alt="logo"
-          className="footer__photo"
+          className="footer__logo"
         />
         <p className="text--larger">Featherbox Studio</p>
       </div>
       <div className="footer__contact">
         <p className="text--larger">staff@featherboxstudio.com</p>
-        <Icon type="twitter" className="icon icon--large icon--black-blue" />
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href={"https://twitter.com/Featherboxgames"}
+        >
+          <Icon
+            type="twitter"
+            className="icon icon--larger icon--white-dark-blue icon--active icon--bg-white"
+          />
+        </a>
       </div>
     </footer>
   );

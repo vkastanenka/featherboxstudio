@@ -53,7 +53,7 @@ class Gallery extends Component {
             </div>
             <div className="gallery__cast-container">
               <img
-                src={require("../../../assets/images/forgetmenot/all-characters.png")}
+                src={require("../../../assets/images/forgetmenot/entire-cast.png")}
                 alt="Gallery Cast"
                 className="gallery__cast"
               />

@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 import Heading from "../../../components/Heading/Heading";
 
 // Section detailing the current projects being worked ou by the studio
-const CurrentProjects = (props) => {
+const CurrentProjects = () => {
   return (
-    <section className="current-projects">
+    <section className="current-projects" id='current-projects'>
       <Heading title="Current Projects" />
       <div className="current-projects__content">
         <div className="current-projects__information">
@@ -17,8 +17,8 @@ const CurrentProjects = (props) => {
             alt="Game Logo"
             className="current-projects__image"
           />
-          <h2 className="heading--secondary text--dancing text--bold">
-            Can you love those who have forgotten you?
+          <h2 className="current-projects__tagline heading--secondary text--dancing text--bold">
+            Can forgotten love still bloom?
           </h2>
           <p className="text--large">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
@@ -26,7 +26,11 @@ const CurrentProjects = (props) => {
             obcaecati quae sit quis dolore beatae nam impedit iste aliquid
             consequuntur nihil cum!
           </p>
-          <button>Learn more!</button>
+          <Link to="/forgetmenot">
+            <button className="text--large btn btn--blue btn--translate">
+              Learn more!
+            </button>
+          </Link>
         </div>
       </div>
     </section>

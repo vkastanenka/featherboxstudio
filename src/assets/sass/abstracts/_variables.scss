@@ -2,6 +2,10 @@
 $color-primary-light: #dcf1ff;
 $color-primary: #83cced;
 $color-primary-dark: #61acd6;
+$color-logo-dark: #246284;
+$color-logo-light: #a4ecff;
+
+$color-secondary: #ffd1dc;
 
 $color-invalid: salmon;
 
@@ -24,7 +28,17 @@ $font-size-small: 1.4rem;
 $font-size-smaller: 1.2rem;
 
 // Page padding
-$section-padding: 0 42rem;
+$nav-padding: 1rem 3rem;
+$section-padding: 5rem 3rem;
 
 // BG
 $polkadot-bg: url('../images/polkadot-background.png');
+
+// Box-Shadows
+$shadow-side: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
+$shadow-bottom: 0px 5px 15px rgba(0,0,0,0.2);
+$shadow-bottom--hover: 0px 10px 20px rgba(0,0,0,0.2);
+$shadow-bottom--active: 0px 2.5px 5px rgba(0,0,0,0.2);
+
+// Borders
+$border-bottom-light-grey: 2px solid $color-grey-light;

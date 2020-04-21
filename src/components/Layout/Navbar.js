@@ -1,40 +1,116 @@
 // React
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import PropTypes from "prop-types";
 
 // Components
 import Icon from "../Icon/Icon";
 
 // Navbar for every page
-const Navbar = (props) => {
-  const links = props.links.map((link) => {
-    return (
-      <li key={link} className="navbar__link text--larger">
-        {link}
-      </li>
-    );
-  });
+class Navbar extends Component {
+  state = {
+    projectsHover: false,
+  };
 
-  return (
-    <nav className="navbar">
-      <div className="navbar__home">
-        <img
-          src={require("../../assets/images/featherbox-logo--blue--smaller.png")}
-          alt="logo"
-          className="navbar__logo"
-        />
-        <p className="text--larger">Home</p>
-      </div>
-      <ul className="navbar__links">
-        {links}
-        <li className="navbar__link">
-          <Icon type="twitter" className="icon icon--larger icon--white-blue" />
-        </li>
-      </ul>
-    </nav>
-  );
-};
+  render() {
+    const links = this.props.links.map((link) => {
+      let navLink;
+      let projectsDropdown = null;
+
+      if (link.length === 1) {
+        navLink = (
+          <li
+            key={link[0]}
+            className="navbar__link text--larger"
+            onClick={scroll.scrollToTop}
+          >
+            {link[0]}
+          </li>
+        );
+      } else if (link[0] === "Projects") {
+        if (this.state.projectsHover) {
+          projectsDropdown = (
+            <ul className="navbar__dropdown">
+              <li className="navbar__dropdown-link text--default text--grey">
+                <ScrollLink
+                  to="current-projects"
+                  spy={true}
+                  smooth={true}
+                  offset={-93}
+                  duration={500}
+                >
+                  Current Projects
+                </ScrollLink>
+              </li>
+              <li className="navbar__dropdown-link text--default text--grey">
+                <Link to="/forgetmenot">Forget Me Not</Link>
+                <img src={require('../../assets/images/forgetmenot/flower.png')} alt="flower" className="navbar__dropdown-image"/>
+              </li>
+            </ul>
+          );
+        }
+
+        navLink = (
+          <li
+            key={link[0]}
+            className="navbar__link navbar__link--projects text--larger"
+            onMouseEnter={() => this.setState({ projectsHover: true })}
+            onMouseLeave={() => this.setState({ projectsHover: false })}
+          >
+            <p>{link[0]}</p>
+            {projectsDropdown}
+          </li>
+        );
+      } else {
+        navLink = (
+          <li key={link[0]} className="navbar__link text--larger">
+            <ScrollLink
+              className='text--white-dark-blue'
+              to={link[1]}
+              spy={true}
+              smooth={true}
+              offset={-93}
+              duration={500}
+            >
+              {link[0]}
+            </ScrollLink>
+          </li>
+        );
+      }
+
+      return navLink;
+    });
+
+    return (
+      <nav className="navbar">
+        <div className="navbar__home">
+          <img
+            src={require("../../assets/images/featherbox-logo--blue--smaller.png")}
+            alt="logo"
+            className="navbar__logo"
+          />
+          <Link to="/" className="text--larger navbar__link">
+            Home
+          </Link>
+        </div>
+        <ul className="navbar__links">
+          {links}
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={"https://twitter.com/Featherboxgames"}
+          >
+            <Icon
+              type="twitter"
+              className="icon icon--larger icon--white-dark-blue icon--active icon--bg-white"
+            />
+          </a>
+        </ul>
+      </nav>
+    );
+  }
+}
 
 Navbar.propTypes = {
   links: PropTypes.array.isRequired,

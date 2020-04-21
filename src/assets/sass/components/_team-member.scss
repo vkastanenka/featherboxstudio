@@ -9,9 +9,25 @@
     flex-basis: 50%;
     text-align: center;
   }
-  
+
+  &__contact > :last-child {
+    border-bottom: $border-bottom-light-grey;
+    display: inline-block;
+  }
+
   &__info {
     border-radius: 10px;
+    box-shadow: $shadow-bottom;
+
+    & > :not(:first-child) {
+      padding: 2rem;
+    }
+
+    & > :nth-child(2) {
+      border-bottom: $border-bottom-light-grey;
+      width: 80%;
+      margin: 0 auto;
+    }
   }
 
   &__photo-container {
@@ -32,18 +48,18 @@
 
     &--victoria {
       background-image: linear-gradient(
-        rgba($color-black, 0.3),
-        rgba($color-black, 0.3)
-      ),
-      url("../images/contact-icon--victoria--background.jpg");
+          rgba($color-black, 0.3),
+          rgba($color-black, 0.3)
+        ),
+        url("../images/contact-icon--victoria--background.jpg");
     }
 
     &--evan {
       background-image: linear-gradient(
-        rgba($color-black, 0.3),
-        rgba($color-black, 0.3)
-      ),
-      url("../images/contact-icon--evan--background.jpg");
+          rgba($color-black, 0.3),
+          rgba($color-black, 0.3)
+        ),
+        url("../images/contact-icon--evan--background.jpg");
     }
   }
 
@@ -53,5 +69,19 @@
     border: 2px solid $color-grey-light;
     padding: 0.3rem;
     @extend %abs-center;
+  }
+
+  &__identity {
+    & > :first-child {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__social-icons {
+    margin-bottom: 1rem;
+
+    & > * {
+      margin: 0 1rem;
+    }
   }
 }

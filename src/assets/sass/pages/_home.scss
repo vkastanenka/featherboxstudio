@@ -1,43 +1,137 @@
 .header {
-  text-align: center;
+  &--home {
+    text-align: center;
+    padding: $section-padding;
 
-  &__logo {
-    // TODO:
-    background-color: lightcyan;
+    &__main {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -2rem;
 
-    height: 50vh;
+      & > :last-child {
+        opacity: 0;
+        transform: translateX(-20%);
+        animation: 1s appearFromLeft linear forwards;
+        animation-delay: 1s;
+        position: relative;
+        z-index: 4;
+      }
+    }
+
+    &__logo {
+      animation: 2s appear linear;
+      position: relative;
+      z-index: 5;
+      margin-right: 3rem;
+      height: 30rem;
+    }
   }
 }
 
 .current-projects {
   &__content {
-    height: 90vh;
+    height: 80vh;
     background-image: linear-gradient(
-        rgba($color-primary, 0.4),
-        rgba($color-primary-light, 0.4)
+        rgba($color-primary, 0.1),
+        rgba($color-primary, 0.1)
       ),
-      url("../images/forgetmenot/main-menu--transparent.png");
-    background-position: top;
+      url("../images/forgetmenot/main-menu--transparent.jpg");
+    background-position: top right;
     background-size: cover;
+    text-align: center;
   }
 
   &__information {
-    width: 40%;
-    // padding-left: 10rem;
+    width: 50%;
+    height: 100%;
+    padding: 0 3rem;
+
+    position: relative;
+    top: 6%;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    & > :first-child {
+      margin-bottom: 2rem;
+    }
+
+    & > :nth-child(2) {
+      margin-bottom: 1rem;
+    }
+
+    & > :nth-child(3) {
+      margin-bottom: 3rem;
+    }
   }
 
   &__image {
-    height: 100%;
-    width: 100%;
+    height: 30rem;
   }
 }
 
 .contacts {
   &__content {
-    padding: $section-padding;
+    padding: 5rem 3rem;
+  }
+
+  &__website {
+    & > * {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__staff-contact {
+    display: flex;
+    align-items: center;
+
+    & > :first-child {
+      margin-right: 2rem;
+      border-bottom: $border-bottom-light-grey;
+    }
+  }
+
+  &__team-members {
+    text-align: center;
+  }
+
+  &__team-member {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__heading-divider {
+    transform: translateY(-2px);
+    height: 15rem;
+    margin-bottom: 2rem;
+    opacity: 0.4;
   }
 }
+
+// &__logo-container {
+//   border: 0.9rem solid $color-logo-dark;
+//   height: 27.2rem;
+//   width: 27.2rem;
+//   position: relative;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   margin-right: 6rem;
+//   animation: 2s appear linear;
+
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     height: 27.2rem;
+//     width: 27.2rem;
+//     border: 1.6rem solid $color-logo-light;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-40%, -40%);
+//   }
+// }

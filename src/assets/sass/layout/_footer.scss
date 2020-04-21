@@ -1,14 +1,23 @@
 .footer {
-  // TODO:
-  background-color: lightpink;
-  padding: $section-padding;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
+  color: $color-grey-darker;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  padding: $nav-padding;
+
   &__logo, &__contact {
     display: flex;
     align-items: center;
+  }
+
+  &__logo {
+    margin-right: 3rem;
+  }
+
+  &__contact > :last-child {
+    margin-left: 3rem;
   }
 }

@@ -15,9 +15,9 @@ a {
 }
 
 .heading {
-  // &--primary {
-  //   font-size: 3rem;
-  // }
+  &--primary {
+    font-size: 5rem;
+  }
 
   &--secondary {
     font-size: 4rem;
@@ -47,6 +47,10 @@ a {
     font-size: 1.8rem;
   }
 
+  &--default {
+    font-size: 1.6rem;
+  }
+
   &--small {
     font-size: 1.4rem;
   }
@@ -73,5 +77,14 @@ a {
 
   &--grey {
     color: $color-grey;
+  }
+
+  &--white-dark-blue {
+    color: $color-white;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
   }
 }

@@ -5,6 +5,11 @@
   overflow: hidden;
   height: 8vh;
   background-color: $color-primary-light;
+  border-top: 3px solid $color-primary-light;
+  border-bottom: 3px solid $color-primary-light;
+  box-shadow: $shadow-bottom;
+  position: relative;
+  z-index: 5;
 
   &__text {
     flex-basis: 40%;
@@ -23,12 +28,12 @@
 
     &--left {
       background-position: top;
-      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%);
+      clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
     }
 
     &--right {
       background-position: bottom;
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%);
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     }
   }
 }

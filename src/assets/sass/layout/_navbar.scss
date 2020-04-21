@@ -1,15 +1,85 @@
 .navbar {
   // TODO:
-  background-color: lightblue;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.7), rgba($color-primary-dark, 0.7)), url('../images/feather-background.jpg');
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  padding: $section-padding;
+  padding: $nav-padding;
+  box-shadow: $shadow-bottom;
 
   & > * {
     display: flex;
     align-items: center;
+  }
+
+  // &__home {
+  //   & > :nth-child(2) {
+  //     border-bottom: 2px solid rgba($color-white, 0.4);
+  //   }
+  // }
+
+  &__logo {
+    margin-right: 3rem;
+  }
+
+  &__link {
+    border-bottom: 2px solid rgba($color-white, 0.4);
+    color: $color-white;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      color: $color-primary-dark;
+    }
+  }
+
+  &__links > :not(:first-child) {
+    margin-left: 3rem;
+  }
+
+  &--projects {
+    position: relative;
+  }
+
+  &__dropdown {
+    background-color: $color-white;
+    position: absolute;
+    padding: 1rem 2rem;
+    border: 1px solid $color-primary;
+
+    & > * {
+      border-bottom: 2px solid $color-grey-light;
+
+      & > :first-child {
+        transition: all 0.3s;
+        &:hover {
+          color: $color-primary-dark;
+        }
+      }
+    }
+
+    & > :not(:first-child) {
+      & > :first-child {
+        margin-right: 1rem;
+      }
+
+      &:hover > :nth-child(2) {
+        animation: 2s infinite spin linear;
+      }
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__dropdown-image {
+    height: 2rem;
   }
 }

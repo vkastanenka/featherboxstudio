@@ -1,10 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
-.team-member__photo {
+.team-member__photo, .header--game__video-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes box-separate {
+  0% {
+    transform: translate(-50%, -50%); }
+  100% {
+    transform: translate(-40%, -40%); } }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 100%; } }
+
+@keyframes appearFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 *,
 *::after,
@@ -17,10 +43,19 @@ html {
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../images/polkadot-background.png");
+  padding: 0 42rem; }
+
+.page {
+  background-color: #fff;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2), -5px 0 15px rgba(0, 0, 0, 0.2); }
 
 li {
   list-style: none; }
+
+button {
+  cursor: pointer; }
 
 body {
   line-height: 1.6;
@@ -32,6 +67,9 @@ body {
 a {
   text-decoration: none;
   color: #222; }
+
+.heading--primary {
+  font-size: 5rem; }
 
 .heading--secondary {
   font-size: 4rem; }
@@ -51,6 +89,9 @@ a {
 
 .text--large {
   font-size: 1.8rem; }
+
+.text--default {
+  font-size: 1.6rem; }
 
 .text--small {
   font-size: 1.4rem; }
@@ -73,6 +114,12 @@ a {
 .text--grey {
   color: #888; }
 
+.text--white-dark-blue {
+  color: #fff;
+  transition: all 0.3s; }
+  .text--white-dark-blue:hover {
+    color: #61acd6; }
+
 .hover-basic {
   transition: all 0.3s; }
   .hover-basic:hover {
@@ -90,11 +137,22 @@ a {
     transform: translateY(2px);
     box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6); }
 
-.bg-video {
-  height: 100%;
-  position: relative; }
-  .bg-video__content {
-    height: 100%; }
+.btn {
+  padding: 1.5rem 4.5rem;
+  border-radius: 30px;
+  outline: none;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s; }
+  .btn--blue {
+    border: 2px solid #83cced;
+    color: #61acd6;
+    background: #fff; }
+  .btn--translate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); }
+  .btn--translate:focus {
+    transform: translateY(2px);
+    box-shadow: 0px 2.5px 5px rgba(0, 0, 0, 0.2); }
 
 .heading {
   text-align: center;
@@ -102,7 +160,12 @@ a {
   align-items: center;
   overflow: hidden;
   height: 8vh;
-  background-color: #dcf1ff; }
+  background-color: #dcf1ff;
+  border-top: 3px solid #dcf1ff;
+  border-bottom: 3px solid #dcf1ff;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 5; }
   .heading__text {
     flex-basis: 40%; }
   .heading__flowers {
@@ -113,14 +176,17 @@ a {
     background-size: cover; }
     .heading__flowers--left {
       background-position: top;
-      clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 0% 100%); }
+      clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%); }
     .heading__flowers--right {
       background-position: bottom;
-      clip-path: polygon(10% 0%, 100% 0%, 100% 100%, 0% 100%); }
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%); }
 
 .icon {
   transition: all 0.3s;
-  cursor: pointer; }
+  padding: 0.7rem;
+  box-sizing: content-box; }
+  .icon--active {
+    cursor: pointer; }
   .icon--larger {
     height: 3rem;
     width: 3rem; }
@@ -139,6 +205,22 @@ a {
     fill: #f7f7f7; }
   .icon--blue {
     fill: #83cced; }
+  .icon--bg-white {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    border: 2px solid #fff; }
+  .icon--bg-blue {
+    background-color: rgba(131, 204, 237, 0.2);
+    border-radius: 10px;
+    border: 2px solid #83cced; }
+  .icon--bg-yellow {
+    background-color: rgba(255, 209, 220, 0.2);
+    border-radius: 10px;
+    border: 2px solid #ffd1dc; }
+  .icon--white-dark-blue {
+    fill: #f7f7f7; }
+    .icon--white-dark-blue:hover {
+      fill: #61acd6; }
   .icon--white-blue {
     fill: #f7f7f7; }
     .icon--white-blue:hover {
@@ -147,10 +229,22 @@ a {
     fill: #83cced; }
     .icon--blue-white:hover {
       fill: #f7f7f7; }
+  .icon--black-dark-blue {
+    fill: #222; }
+    .icon--black-dark-blue:hover {
+      fill: #61acd6; }
+  .icon--black-secondary {
+    fill: #222; }
+    .icon--black-secondary:hover {
+      fill: #ffd1dc; }
   .icon--black-blue {
     fill: #222; }
     .icon--black-blue:hover {
       fill: #83cced; }
+  .icon--black-white {
+    fill: #222; }
+    .icon--black-white:hover {
+      fill: #fff; }
 
 .team-member {
   display: flex;
@@ -160,8 +254,18 @@ a {
   .team-member__info, .team-member__contact {
     flex-basis: 50%;
     text-align: center; }
+  .team-member__contact > :last-child {
+    border-bottom: 2px solid #f7f7f7;
+    display: inline-block; }
   .team-member__info {
-    border-radius: 10px; }
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
+    .team-member__info > :not(:first-child) {
+      padding: 2rem; }
+    .team-member__info > :nth-child(2) {
+      border-bottom: 2px solid #f7f7f7;
+      width: 80%;
+      margin: 0 auto; }
   .team-member__photo-container {
     width: 100%;
     height: 14rem;
@@ -180,112 +284,296 @@ a {
     border-radius: 50%;
     border: 2px solid #f7f7f7;
     padding: 0.3rem; }
+  .team-member__identity > :first-child {
+    margin-bottom: 1rem; }
+  .team-member__social-icons {
+    margin-bottom: 1rem; }
+    .team-member__social-icons > * {
+      margin: 0 1rem; }
 
 .footer {
-  background-color: lightpink;
-  padding: 0 42rem;
+  background-image: linear-gradient(to right bottom, #dcf1ff, #61acd6);
+  color: #222;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  padding: 1rem 3rem; }
   .footer__logo, .footer__contact {
     display: flex;
     align-items: center; }
+  .footer__logo {
+    margin-right: 3rem; }
+  .footer__contact > :last-child {
+    margin-left: 3rem; }
 
 .navbar {
-  background-color: lightblue;
+  background-image: linear-gradient(to right bottom, rgba(220, 241, 255, 0.7), rgba(97, 172, 214, 0.7)), url("../images/feather-background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 42rem; }
+  padding: 1rem 3rem;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); }
   .navbar > * {
     display: flex;
     align-items: center; }
+  .navbar__logo {
+    margin-right: 3rem; }
+  .navbar__link {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .navbar__link:hover {
+      color: #61acd6; }
+  .navbar__links > :not(:first-child) {
+    margin-left: 3rem; }
+  .navbar--projects {
+    position: relative; }
+  .navbar__dropdown {
+    background-color: #fff;
+    position: absolute;
+    padding: 1rem 2rem;
+    border: 1px solid #83cced; }
+    .navbar__dropdown > * {
+      border-bottom: 2px solid #f7f7f7; }
+      .navbar__dropdown > * > :first-child {
+        transition: all 0.3s; }
+        .navbar__dropdown > * > :first-child:hover {
+          color: #61acd6; }
+    .navbar__dropdown > :not(:first-child) > :first-child {
+      margin-right: 1rem; }
+    .navbar__dropdown > :not(:first-child):hover > :nth-child(2) {
+      animation: 2s infinite spin linear; }
+    .navbar__dropdown > :not(:last-child) {
+      margin-bottom: 2rem; }
+  .navbar__dropdown-image {
+    height: 2rem; }
 
 .header--game {
   height: 70vh;
   position: relative;
   display: flex;
   justify-content: center; }
+  .header--game__video-container {
+    height: 100%;
+    padding: 5rem 3rem; }
+  .header--game__video {
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2), -5px 0 15px rgba(0, 0, 0, 0.2), 0px 5px 15px rgba(0, 0, 0, 0.2); }
   .header--game__logo {
     height: 20%;
     position: absolute;
-    top: 1rem;
-    left: 1rem; }
+    top: 7rem;
+    left: 6rem;
+    opacity: 0.6; }
   .header--game__kickstarter {
     position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px; }
+    bottom: 7rem;
+    left: 6rem;
+    border-radius: 10px;
+    padding: 2rem;
+    opacity: 0.6;
+    transition: all 0.3s;
+    cursor: pointer; }
+    .header--game__kickstarter:hover {
+      opacity: 1;
+      transform: translateY(-2px) scale(1.02); }
+  .header--game__kickstarter-logo {
+    height: 3rem; }
 
-.gallery {
-  padding: 0 42rem;
-  background-image: url("../images/polkadot-background.png"); }
-  .gallery__content {
-    padding: 2rem 0;
-    background-color: #fff; }
-  .gallery__gallery {
+.gallery__content {
+  padding: 2rem 0;
+  background-color: #fff;
+  padding: 5rem 3rem 0rem 3rem; }
+
+.gallery__gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5rem; }
+
+.gallery__images {
+  display: flex;
+  justify-content: space-between; }
+
+.gallery__image {
+  width: 19.2rem;
+  height: 10.8rem;
+  margin: 0rem 1.6rem;
+  background-color: lightpink; }
+
+.gallery__cast-container {
+  height: 55vh;
+  display: flex;
+  justify-content: center; }
+
+.gallery__cast {
+  height: 100%; }
+
+.game-details__content-warning {
+  padding: 2rem;
+  text-align: center;
+  background-color: rgba(131, 204, 237, 0.2);
+  border-radius: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: #888;
+  margin-bottom: 2rem; }
+
+.game-details__content {
+  padding: 5rem 3rem;
+  background-color: #fff;
+  display: flex; }
+
+.game-details__game-description {
+  flex-basis: 70%;
+  padding: 0 2rem; }
+  .game-details__game-description > :not(:last-child) {
+    margin-bottom: 2rem; }
+
+.game-details__heading {
+  width: 100%; }
+
+.game-details__description {
+  padding: 0 3rem; }
+  .game-details__description > :not(:last-child) {
+    margin-bottom: 1rem; }
+
+.game-details__details {
+  flex-basis: 30%;
+  padding: 0 2rem;
+  border-left: 2px solid #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .game-details__details--divider {
+    height: 4.8rem;
+    opacity: 0.4; }
+  .game-details__details--requirements > :first-child {
     display: flex;
+    align-items: flex-end;
     justify-content: space-between; }
-  .gallery__images {
+  .game-details__details > * > :not(:first-child) {
     display: flex; }
-  .gallery__image {
-    width: 1.92rem;
-    height: 1.08rem;
-    margin: 0rem 5rem;
-    background-color: lightpink; }
-  .gallery__cast-container {
-    height: 30vh; }
-  .gallery__cast {
-    height: 100%; }
+    .game-details__details > * > :not(:first-child) > :first-child {
+      flex-basis: 40%; }
+    .game-details__details > * > :not(:first-child) > :last-child {
+      flex-basis: 60%; }
+  .game-details__details > * > :not(:last-child) {
+    margin-bottom: 1rem; }
 
-.game-details {
-  padding: 0 42rem;
-  background-image: url("../images/polkadot-background.png"); }
-  .game-details__content {
-    padding: 2rem 0;
-    background-color: #fff;
-    display: flex; }
-  .game-details__game-description {
-    flex-basis: 70%;
-    padding: 0 5rem; }
-  .game-details__details {
-    flex-basis: 30%;
-    padding: 0 2rem; }
+.game-details__detail--languages, .game-details__detail--language {
+  display: flex;
+  align-items: center; }
 
-.characters {
-  padding: 0 42rem;
-  background-image: url("../images/polkadot-background.png"); }
-  .characters__content {
-    padding: 2rem 5rem;
-    background-color: #fff; }
-  .characters__character {
-    display: flex;
-    align-items: center; }
-  .characters__character-profile {
-    height: 40rem; }
+.game-details__os > :not(:first-child) {
+  margin-left: 0.3rem; }
 
-.header {
-  text-align: center; }
-  .header__logo {
-    background-color: lightcyan;
-    height: 50vh; }
+.game-details__feature {
+  display: flex;
+  align-items: center; }
+  .game-details__feature > :first-child {
+    margin-right: 1rem; }
 
-.current-projects__content {
-  height: 90vh;
-  background-image: linear-gradient(rgba(131, 204, 237, 0.4), rgba(220, 241, 255, 0.4)), url("../images/forgetmenot/main-menu--transparent.png");
-  background-position: top;
-  background-size: cover; }
+.characters__content {
+  padding: 5rem 3rem;
+  background-color: #fff; }
+  .characters__content > :not(:last-child) {
+    margin-bottom: 2rem; }
 
-.current-projects__information {
-  width: 40%;
+.characters__character {
+  display: flex;
+  align-items: center; }
+
+.characters__name-info {
   display: flex;
   flex-direction: column;
   align-items: center; }
 
-.current-projects__image {
+.characters__name {
+  width: 100%;
+  margin-bottom: 1rem; }
+
+.characters__character-profile {
+  height: 40rem; }
+
+.header--home {
+  text-align: center;
+  padding: 5rem 3rem; }
+  .header--home__main {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -2rem; }
+    .header--home__main > :last-child {
+      opacity: 0;
+      transform: translateX(-20%);
+      animation: 1s appearFromLeft linear forwards;
+      animation-delay: 1s;
+      position: relative;
+      z-index: 4; }
+  .header--home__logo {
+    animation: 2s appear linear;
+    position: relative;
+    z-index: 5;
+    margin-right: 3rem;
+    height: 30rem; }
+
+.current-projects__content {
+  height: 80vh;
+  background-image: linear-gradient(rgba(131, 204, 237, 0.1), rgba(131, 204, 237, 0.1)), url("../images/forgetmenot/main-menu--transparent.jpg");
+  background-position: top right;
+  background-size: cover;
+  text-align: center; }
+
+.current-projects__information {
+  width: 50%;
   height: 100%;
-  width: 100%; }
+  padding: 0 3rem;
+  position: relative;
+  top: 6%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .current-projects__information > :first-child {
+    margin-bottom: 2rem; }
+  .current-projects__information > :nth-child(2) {
+    margin-bottom: 1rem; }
+  .current-projects__information > :nth-child(3) {
+    margin-bottom: 3rem; }
+
+.current-projects__image {
+  height: 30rem; }
 
 .contacts__content {
-  padding: 0 42rem; }
+  padding: 5rem 3rem; }
+
+.contacts__website > * {
+  margin-bottom: 2rem; }
+
+.contacts__staff-contact {
+  display: flex;
+  align-items: center; }
+  .contacts__staff-contact > :first-child {
+    margin-right: 2rem;
+    border-bottom: 2px solid #f7f7f7; }
+
+.contacts__team-members {
+  text-align: center; }
+
+.contacts__team-member:not(:last-child) {
+  margin-bottom: 4rem; }
+
+.contacts__heading-divider {
+  transform: translateY(-2px);
+  height: 15rem;
+  margin-bottom: 2rem;
+  opacity: 0.4; }
