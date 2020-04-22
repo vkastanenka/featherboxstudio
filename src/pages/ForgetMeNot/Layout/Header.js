@@ -19,12 +19,22 @@ const Header = () => {
           className="header--game__logo"
         />
         <div className="header--game__kickstarter">
-          <h3 className="heading--tertiary text--dancing text--bold">Support On</h3>
-          <img
-            src={require("../../../assets/images/kickstarter-logo.png")}
-            alt="Kickstarter Logo"
-            className="header--game__kickstarter-logo"
-          />
+          <a
+            rel="noopener noreferrer"
+            target="_blank"
+            href={
+              "https://www.kickstarter.com/projects/forgetmenotgame/forget-me-not-8?ref=project_link"
+            }
+          >
+            <h3 className="heading--tertiary text--dancing text--bold">
+              Support On
+            </h3>
+            <img
+              src={require("../../../assets/images/kickstarter-logo.png")}
+              alt="Kickstarter Logo"
+              className="header--game__kickstarter-logo"
+            />
+          </a>
         </div>
       </div>
     </header>

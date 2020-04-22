@@ -4,3 +4,30 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+%hover-shadows {
+  transition: all 0.3s;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    transform: (translateY(-2px));
+    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  &:active {
+    transform: (translateY(2px));
+    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6);
+  }
+}
+
+%hover-basic {
+  transition: all 0.3s;
+
+  &:hover {
+    transform: (translateY(-2px));
+  }
+
+  &:active {
+    transform: (translateY(2px));
+  }
+}

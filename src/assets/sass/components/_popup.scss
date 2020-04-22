@@ -1,0 +1,28 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100000;
+
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  background-color: rgba($color-black, 0.6);
+
+  &__content {
+    height: 60%;
+    width: 60%;
+    @extend %abs-center;
+  }
+
+  // &:target {
+  //   opacity: 1;
+  //   visibility: visible;
+  // }
+
+  // &:target &__content {
+  //   opacity: 1;
+  //   transform: scale(1);
+  // }
+}

@@ -9,7 +9,7 @@ import Heading from "../../../components/Heading/Heading";
 const Characters = () => {
   return (
     <Auxiliary>
-      <section className="characters">
+      <section className="characters" id='characters'>
         <Heading title="Characters" />
         <div className="characters__content">
           <div className="characters__character">

@@ -7,7 +7,7 @@ const Heading = (props) => {
   return (
     <div className="heading">
       <div className="heading__flowers heading__flowers--left" />
-      <h2 className="heading__text heading--secondary">{props.title}</h2>
+      <h2 className="heading__text heading--secondary text--shadows">{props.title}</h2>
       <div className="heading__flowers heading__flowers--right" />
     </div>
   );

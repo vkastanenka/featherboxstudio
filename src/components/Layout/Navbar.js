@@ -45,7 +45,11 @@ class Navbar extends Component {
               </li>
               <li className="navbar__dropdown-link text--default text--grey">
                 <Link to="/forgetmenot">Forget Me Not</Link>
-                <img src={require('../../assets/images/forgetmenot/flower.png')} alt="flower" className="navbar__dropdown-image"/>
+                <img
+                  src={require("../../assets/images/forgetmenot/flower.png")}
+                  alt="flower"
+                  className="navbar__dropdown-image"
+                />
               </li>
             </ul>
           );
@@ -62,11 +66,24 @@ class Navbar extends Component {
             {projectsDropdown}
           </li>
         );
+      } else if (link[0] === "Kickstarter") {
+        navLink = (
+          <li key={link[0]} className="navbar__link text--larger">
+            <a
+              className='text--white-dark-blue'
+              rel="noopener noreferrer"
+              target="_blank"
+              href={link[1]}
+            >
+              {link[0]}
+            </a>
+          </li>
+        );
       } else {
         navLink = (
           <li key={link[0]} className="navbar__link text--larger">
             <ScrollLink
-              className='text--white-dark-blue'
+              className="text--white-dark-blue"
               to={link[1]}
               spy={true}
               smooth={true}

@@ -28,6 +28,7 @@ const Home = () => {
         <Contacts />
       </main>
       <Footer />
+      <img src={require('../../assets/images/forgetmenot/flower.png')} alt="page flower" className="page__flower"/>
     </div>
   );
 };

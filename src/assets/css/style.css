@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
-.team-member__photo, .header--game__video-container {
+.popup__content, .team-member__photo, .header--game__video-container {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+.hover-shadows, .gallery__image-container {
+  transition: all 0.3s;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4); }
+  .hover-shadows:hover, .gallery__image-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.2); }
+  .hover-shadows:active, .gallery__image-container:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6); }
 
 @keyframes spin {
   0% {
@@ -45,11 +55,20 @@ html {
 body {
   box-sizing: border-box;
   background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../images/polkadot-background.png");
+  background-attachment: fixed;
   padding: 0 42rem; }
 
 .page {
   background-color: #fff;
-  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2), -5px 0 15px rgba(0, 0, 0, 0.2); }
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2), -5px 0 15px rgba(0, 0, 0, 0.2);
+  position: relative; }
+  .page__flower {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 20;
+    opacity: 0.5;
+    height: 15rem; }
 
 li {
   list-style: none; }
@@ -120,6 +139,9 @@ a {
   .text--white-dark-blue:hover {
     color: #61acd6; }
 
+.text--shadows {
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.2); }
+
 .hover-basic {
   transition: all 0.3s; }
   .hover-basic:hover {
@@ -127,15 +149,8 @@ a {
   .hover-basic:active {
     transform: translateY(2px); }
 
-.hover-shadows {
-  transition: all 0.3s;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4); }
-  .hover-shadows:hover {
-    transform: translateY(-2px);
-    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.2); }
-  .hover-shadows:active {
-    transform: translateY(2px);
-    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6); }
+.border--bottom--primary {
+  border-bottom: 2px solid #83cced; }
 
 .btn {
   padding: 1.5rem 4.5rem;
@@ -187,6 +202,9 @@ a {
   box-sizing: content-box; }
   .icon--active {
     cursor: pointer; }
+  .icon--massive {
+    height: 6rem;
+    width: 6rem; }
   .icon--larger {
     height: 3rem;
     width: 3rem; }
@@ -245,6 +263,20 @@ a {
     fill: #222; }
     .icon--black-white:hover {
       fill: #fff; }
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 100000;
+  -webkit-backdrop-filter: blur(1rem);
+  backdrop-filter: blur(1rem);
+  background-color: rgba(0, 0, 0, 0.6); }
+  .popup__content {
+    height: 60%;
+    width: 60%; }
 
 .team-member {
   display: flex;
@@ -390,24 +422,77 @@ a {
 .gallery__content {
   padding: 2rem 0;
   background-color: #fff;
-  padding: 5rem 3rem 0rem 3rem; }
+  padding: 5rem 3rem 0rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 .gallery__gallery {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-bottom: 5rem; }
+  margin-bottom: 3rem; }
+
+.gallery__show-gallery-page-container {
+  display: flex; }
+
+.gallery__show-gallery-page {
+  height: 1rem;
+  width: 1rem;
+  margin: 0 1rem;
+  border-radius: 50%;
+  margin-bottom: 2rem; }
+  .gallery__show-gallery-page--active {
+    background-color: #83cced; }
+  .gallery__show-gallery-page--inactive {
+    background-color: #888; }
 
 .gallery__images {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  position: relative;
+  z-index: 5; }
 
-.gallery__image {
+.gallery__image-container {
   width: 19.2rem;
   height: 10.8rem;
+  position: relative;
+  border-radius: 5px;
   margin: 0rem 1.6rem;
-  background-color: lightpink; }
+  z-index: 20;
+  cursor: pointer;
+  transition: all 0.3s; }
+  .gallery__image-container:hover {
+    transform: scale(1.05); }
+
+.gallery__image {
+  height: 100%;
+  border-radius: 5px; }
+
+.gallery__divider {
+  width: 30rem;
+  opacity: 0.4; }
+
+.gallery__popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%; }
+
+.gallery__popup-image-container {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  margin: 0 3rem;
+  height: 80%;
+  position: relative;
+  z-index: 1000000; }
+
+.gallery__icon-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000000000000; }
 
 .gallery__cast-container {
   height: 55vh;
@@ -455,25 +540,31 @@ a {
   .game-details__details--divider {
     height: 4.8rem;
     opacity: 0.4; }
-  .game-details__details--requirements > :first-child {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between; }
-  .game-details__details > * > :not(:first-child) {
-    display: flex; }
-    .game-details__details > * > :not(:first-child) > :first-child {
-      flex-basis: 40%; }
-    .game-details__details > * > :not(:first-child) > :last-child {
-      flex-basis: 60%; }
   .game-details__details > * > :not(:last-child) {
     margin-bottom: 1rem; }
 
-.game-details__detail--languages, .game-details__detail--language {
+.game-details__detail {
   display: flex;
-  align-items: center; }
+  align-items: flex-start; }
+  .game-details__detail:not(:last-child) {
+    margin-bottom: 1rem; }
+  .game-details__detail > :first-child {
+    flex-basis: 40%; }
+  .game-details__detail > :last-child {
+    flex-basis: 60%; }
+  .game-details__detail--languages {
+    display: flex;
+    align-items: center;
+    transform: translateY(-5px); }
+  .game-details__detail--language {
+    display: flex;
+    align-items: center; }
 
-.game-details__os > :not(:first-child) {
-  margin-left: 0.3rem; }
+.game-details__os {
+  display: flex;
+  justify-content: flex-start; }
+  .game-details__os > :not(:last-child) {
+    margin-right: 1rem; }
 
 .game-details__feature {
   display: flex;
@@ -501,7 +592,8 @@ a {
   margin-bottom: 1rem; }
 
 .characters__character-profile {
-  height: 40rem; }
+  height: 40rem;
+  margin-right: 1rem; }
 
 .header--home {
   text-align: center;
