@@ -167,6 +167,7 @@ class Gallery extends Component {
     // Find current image index
     const galleryCopy = [...gallery];
     const currentImageIndex = galleryCopy
+    // eslint-disable-next-line
       .map((picture, index) => {
         if (picture.large === popupImage) return index;
       })

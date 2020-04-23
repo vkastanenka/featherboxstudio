@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
-.popup__content, .team-member__photo {
+.popup__content, .team-member__photo, .undefined-page {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -999,3 +999,18 @@ a {
   width: 52%;
   margin-bottom: 2rem;
   opacity: 0.4; }
+
+.undefined-page {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2rem 4rem;
+  border: 2px solid #fff;
+  border-radius: 10px; }
+  @media only screen and (max-width: 62.5em) {
+    .undefined-page {
+      width: 60%; } }
+  @media only screen and (max-width: 50em) {
+    .undefined-page {
+      width: 90%; } }
+  .undefined-page > :nth-child(2) {
+    margin-bottom: 1rem; }

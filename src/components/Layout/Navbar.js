@@ -91,7 +91,7 @@ class Navbar extends Component {
               to={link[1]}
               spy={true}
               smooth={true}
-              offset={-93}
+              offset={-80}
               duration={500}
             >
               {link[0]}
