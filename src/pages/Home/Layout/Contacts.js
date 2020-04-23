@@ -86,7 +86,7 @@ const Contacts = () => {
                 >
                   <Icon
                     type="instagram"
-                    className="icon icon--larger icon--black-secondary icon--bg-yellow icon--active"
+                    className="icon icon--larger icon--black-secondary icon--bg-pink icon--active"
                   />
                 </a>
               </div>
@@ -110,12 +110,7 @@ const Contacts = () => {
                 <p className="text--largest">Admin, Tech, Web Development</p>
               </div>
               <p className="text--large">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam,
-                numquam odit. Quisquam dicta corrupti modi eligendi natus amet
-                unde iste neque saepe vitae aliquam ut tempore, perspiciatis
-                quia incidunt voluptatem ratione, nesciunt ducimus beatae
-                blanditiis animi cupiditate veritatis dolore? Libero laborum
-                iure numquam ratione, id quis repellat aperiam. Vitae, hic.
+                Hey everyone, I'm Victoria! I'm the resident web developer and manager of this lovely site you see here. I have experience as a full stack developer, with React being my weapon of choice for the front end, and Express, MongoDB, and Mongoose being utilized for the back end. I'm currently working on my portfolio and freelancing to gain developer experience. If you need a web developer to help develop or maintain your site, feel free to shoot me an email or message me on social media.
               </p>
             </div>
             <div className="team-member__contact">
@@ -137,7 +132,17 @@ const Contacts = () => {
                 >
                   <Icon
                     type="instagram"
-                    className="icon icon--larger icon--black-secondary icon--bg-yellow icon--active"
+                    className="icon icon--larger icon--black-secondary icon--bg-pink icon--active"
+                  />
+                </a>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={"https://github.com/vkastanenka"}
+                >
+                  <Icon
+                    type="github"
+                    className="icon icon--larger icon--black-tertiary icon--bg-tertiary icon--active"
                   />
                 </a>
               </div>
@@ -161,12 +166,7 @@ const Contacts = () => {
                 </p>
               </div>
               <p className="text--large">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Aperiam laborum, natus maxime labore animi perspiciatis
-                expedita, necessitatibus nisi sint similique autem hic dicta,
-                eaque error. Rerum nesciunt at deserunt accusantium, veniam aut,
-                est quaerat velit sunt recusandae sit odio aliquid magnam ab
-                iste tempora quasi, animi labore! Pariatur, doloribus a.
+                Hi, I'm Robin! I help out with writing for our games and composing their original soundtracks. I've been on FL studio for many years now and release music on my own as well. Inspirations of mine include Owl City, vocaloid, and video game soundtracks, which I blend together into cute EDM bangers. As well, I'm currently undergoing a massive project in the form of an extended universe of light and visual novels. The first light novel is complete with work currently being done on the next, which I hope to complete by the end of the year.
               </p>
             </div>
             <div className="team-member__contact">
@@ -188,7 +188,7 @@ const Contacts = () => {
                 >
                   <Icon
                     type="instagram"
-                    className="icon icon--larger icon--black-secondary icon--bg-yellow icon--active"
+                    className="icon icon--larger icon--black-secondary icon--bg-pink icon--active"
                   />
                 </a>
               </div>

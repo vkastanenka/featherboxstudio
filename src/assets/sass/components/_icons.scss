@@ -81,10 +81,18 @@
     box-sizing: content-box;
   }
 
-  &--bg-yellow {
+  &--bg-pink {
     background-color: rgba($color-secondary, 0.2);
     border-radius: 10px;
     border: 2px solid $color-secondary;
+    padding: 0.7rem;
+    box-sizing: content-box;
+  }
+
+  &--bg-tertiary {
+    background-color: rgba($color-tertiary, 0.2);
+    border-radius: 10px;
+    border: 2px solid $color-tertiary;
     padding: 0.7rem;
     box-sizing: content-box;
   }
@@ -122,6 +130,14 @@
   }
 
   &--black-secondary {
+    fill: $color-grey-darker;
+
+    &:hover {
+      fill: $color-secondary;
+    }
+  }
+
+  &--black-tertiary {
     fill: $color-grey-darker;
 
     &:hover {
