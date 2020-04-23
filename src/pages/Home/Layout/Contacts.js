@@ -49,7 +49,7 @@ const Contacts = () => {
               <div className="team-member__photo-container team-member__photo-container--kat">
                 {/* eslint-disable-next-line */}
                 <img
-                  src={require("../../../assets/images/contact-icon--rena.jpg")}
+                  src={require("../../../assets/images/contact-icon--rena--adjusted.jpg")}
                   alt="team member photo"
                   className="team-member__photo"
                 />
@@ -63,12 +63,7 @@ const Contacts = () => {
                 </p>
               </div>
               <p className="text--large">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
-                optio est, at nisi dicta nulla doloribus tempora nam aliquam
-                sint dolorum quidem inventore nesciunt ea eaque cumque assumenda
-                labore natus? Magni, rerum tempore esse incidunt repudiandae a
-                quibusdam repellendus quia, blanditiis eum amet officia ipsum
-                rem non? Accusamus, sunt odit!
+                Hi, I'm Kat. I'm an indie game developer and illustrator! I'm constantly pushing myself to learn more about what I'm good at, and also putting myself out of my comfort zone when I need to. I hope to work at a game development company someday.
               </p>
             </div>
 
@@ -98,13 +93,12 @@ const Contacts = () => {
               <p className="text--larger">Email: projectsbykat@gmail.com</p>
             </div>
           </div>
-
           <div className="contacts__team-member team-member">
             <div className="team-member__info">
               <div className="team-member__photo-container team-member__photo-container--victoria">
                 {/* eslint-disable-next-line */}
                 <img
-                  src={require("../../../assets/images/contact-icon--victoria.jpg")}
+                  src={require("../../../assets/images/contact-icon--victoria--adjusted.png")}
                   alt="team member photo"
                   className="team-member__photo"
                 />
@@ -155,13 +149,13 @@ const Contacts = () => {
               <div className="team-member__photo-container team-member__photo-container--evan">
                 {/* eslint-disable-next-line */}
                 <img
-                  src={require("../../../assets/images/contact-icon--evan.jpg")}
+                  src={require("../../../assets/images/contact-icon--evan--adjusted.jpg")}
                   alt="team member photo"
                   className="team-member__photo"
                 />
               </div>
               <div className="team-member__identity">
-                <h4 className="heading--quaternary text--bold">Evan Tran</h4>
+                <h4 className="heading--quaternary text--bold">Robin Lights</h4>
                 <p className="text--largest">
                   Music Producer, Developer, Writer
                 </p>

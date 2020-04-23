@@ -7,7 +7,36 @@
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px
+
+  // TODO:
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 12px
+  // }
+
+  @include respond(bp-massive-s) {
+    font-size: 59.375%; // 9.5px
+  }
+
+  @include respond(bp-largest) {
+    font-size: 56.25%; // 9px
+  }
+
+  @include respond(bp-large) {
+    font-size: 53.125%; // 8.5px
+  }
+
+  @include respond(bp-medium) {
+    font-size: 50%; // 8px
+  }
+
+  @include respond(bp-small) {
+    font-size: 46.875%; // 7.5px;
+  }
+
+  @include respond(bp-smallest) {
+    font-size: 43.75%; // 7px;
+  }
 }
 
 body {
@@ -15,7 +44,31 @@ body {
 
   background-image: linear-gradient(rgba($color-black, 0.05), rgba($color-black, 0.05)), url('../images/polkadot-background.png');
   background-attachment: fixed;
-  padding: 0 42rem;
+  padding: 0 21%;
+
+  @include respond(bp-massive-s) {
+    padding: 0 16%;
+  }
+
+  @include respond(bp-largest) {
+    padding: 0 14%;
+  }
+
+  @include respond(bp-large) {
+    padding: 0 10%;
+  }
+
+  @include respond(bp-medium) {
+    padding: 0 5%;
+  }
+
+  @include respond(bp-small) {
+    padding: 0;
+  }
+
+  // @include respond(bp-medium) {
+  //   padding: 0 15%;
+  // }
 }
 
 .page {
@@ -29,7 +82,7 @@ body {
     left: 1rem;
     z-index: 20;
     opacity: 0.5;
-    height: 15rem;
+    width: 8%;
   }
 }
 

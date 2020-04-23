@@ -9,7 +9,7 @@ import Icon from "../Icon/Icon";
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer__logo">
+      <div className="footer__logo-container">
         <img
           src={require("../../assets/images/featherbox-logo--blue--smaller.png")}
           alt="logo"

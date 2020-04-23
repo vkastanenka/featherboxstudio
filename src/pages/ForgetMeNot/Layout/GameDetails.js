@@ -16,8 +16,7 @@ class GameDetails extends Component {
     const { osRequirements } = this.state;
     let requirementsDisplayed = null;
     let osIconClass = "icon icon--small icon--blue icon--active";
-    let osIconClassActive =
-      "icon icon--small icon--blue border--bottom--primary icon--active";
+    let osIconClassActive = "icon--small icon--blue icon--bg-blue icon--active";
 
     if (osRequirements === "windows") {
       requirementsDisplayed = (
@@ -214,6 +213,19 @@ class GameDetails extends Component {
                 <span className="text--small text--grey">
                   &copy; Featherbox Studio
                 </span>
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={
+                    "https://www.kickstarter.com/projects/forgetmenotgame/forget-me-not-8?ref=project_link"
+                  }
+                >
+                  <img
+                    src={require("../../../assets/images/kickstarter-logo.png")}
+                    alt="Kickstarter Logo"
+                    className="game-details__kickstarter"
+                  />
+                </a>
               </div>
             </div>
 

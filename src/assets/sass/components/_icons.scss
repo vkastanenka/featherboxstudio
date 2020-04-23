@@ -1,8 +1,8 @@
 .icon {
   transition: all 0.3s;
 
-  padding: 0.7rem;
-  box-sizing: content-box;
+  // padding: 0.7rem;
+  // box-sizing: content-box;
 
   &--active {
     cursor: pointer;
@@ -11,11 +11,31 @@
   &--massive {
     height: 6rem;
     width: 6rem;
+
+    @include respond(bp-medium) {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    @include respond(bp-small) {
+      height: 4.5rem;
+      width: 4.5rem;
+    }
+  }
+
+  &--largest {
+    height: 4.5rem;
+    width: 4.5rem;
   }
 
   &--larger {
     height: 3rem;
     width: 3rem;
+
+    @include respond(bp-smaller) {
+      height: 2.5rem;
+      width: 2.5rem;
+    }
   }
 
   &--large {
@@ -49,18 +69,24 @@
     background-color: rgba($color-white, 0.2);
     border-radius: 10px;
     border: 2px solid $color-white;
+    padding: 0.7rem;
+    box-sizing: content-box;
   }
 
   &--bg-blue {
     background-color: rgba($color-primary, 0.2);
     border-radius: 10px;
     border: 2px solid $color-primary;
+    padding: 0.7rem;
+    box-sizing: content-box;
   }
 
   &--bg-yellow {
     background-color: rgba($color-secondary, 0.2);
     border-radius: 10px;
     border: 2px solid $color-secondary;
+    padding: 0.7rem;
+    box-sizing: content-box;
   }
 
   &--white-dark-blue {

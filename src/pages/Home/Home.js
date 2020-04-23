@@ -1,10 +1,7 @@
 // React
 import React from "react";
-// import { Link } from "react-router-dom";
 
 // Components
-// import Auxiliary from "../../components/HigherOrder/Auxiliary";
-
 import Navbar from "../../components/Layout/Navbar";
 import Footer from "../../components/Layout/Footer";
 import Header from "./Layout/Header";
@@ -17,7 +14,7 @@ const Home = () => {
     <div className="page">
       <Navbar
         links={[
-          ["Featherbox"],
+          ["Top"],
           ["Projects", "current-projects"],
           ["Contacts", "contacts"],
         ]}
@@ -28,7 +25,7 @@ const Home = () => {
         <Contacts />
       </main>
       <Footer />
-      <img src={require('../../assets/images/forgetmenot/flower.png')} alt="page flower" className="page__flower"/>
+      <img src={require('../../assets/images/forgetmenot/flower--adjusted.png')} alt="page flower" className="page__flower"/>
     </div>
   );
 };

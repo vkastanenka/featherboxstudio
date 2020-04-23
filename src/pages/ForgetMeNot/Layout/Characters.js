@@ -14,7 +14,7 @@ const Characters = () => {
         <div className="characters__content">
           <div className="characters__character">
             <img
-              src={require("../../../assets/images/forgetmenot/bio--iris.jpg")}
+              src={require("../../../assets/images/forgetmenot/bio--iris--adjusted.jpg")}
               alt="Character Bio"
               className="characters__character-profile"
             />
@@ -40,7 +40,7 @@ const Characters = () => {
           </div>
           <div className="characters__character">
             <img
-              src={require("../../../assets/images/forgetmenot/bio--sage.jpg")}
+              src={require("../../../assets/images/forgetmenot/bio--sage--adjusted.jpg")}
               alt="Character Bio"
               className="characters__character-profile"
             />
@@ -64,7 +64,7 @@ const Characters = () => {
           </div>
           <div className="characters__character">
             <img
-              src={require("../../../assets/images/forgetmenot/bio--blake.jpg")}
+              src={require("../../../assets/images/forgetmenot/bio--blake--adjusted.jpg")}
               alt="Character Bio"
               className="characters__character-profile"
             />
@@ -89,7 +89,7 @@ const Characters = () => {
           </div>
           <div className="characters__character">
             <img
-              src={require("../../../assets/images/forgetmenot/bio--vivian.jpg")}
+              src={require("../../../assets/images/forgetmenot/bio--vivian--adjusted.jpg")}
               alt="Character Bio"
               className="characters__character-profile"
             />

@@ -15,8 +15,7 @@ const ForgetMeNot = () => {
     <div className="page">
       <Navbar
         links={[
-          ["Forget Me Not"],
-          ["Kickstarter", "https://www.kickstarter.com/projects/forgetmenotgame/forget-me-not-8?ref=project_link"],
+          ["Top"],
           ["Gallery", "gallery"],
           ["Details", "details"],
           ["Characters", "characters"],
@@ -29,7 +28,7 @@ const ForgetMeNot = () => {
         <Characters />
       </main>
       <Footer />
-      <img src={require('../../assets/images/forgetmenot/flower.png')} alt="page flower" className="page__flower"/>
+      <img src={require('../../assets/images/forgetmenot/flower--adjusted.png')} alt="page flower" className="page__flower"/>
     </div>
   );
 };

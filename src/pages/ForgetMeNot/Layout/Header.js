@@ -14,7 +14,7 @@ const Header = () => {
           Your browser is not supported!
         </video>
         <img
-          src={require("../../../assets/images/forgetmenot/forgetmenot-logo.png")}
+          src={require("../../../assets/images/forgetmenot/forgetmenot-logo--adjusted.png")}
           alt="Game Logo"
           className="header--game__logo"
         />
@@ -26,9 +26,6 @@ const Header = () => {
               "https://www.kickstarter.com/projects/forgetmenotgame/forget-me-not-8?ref=project_link"
             }
           >
-            <h3 className="heading--tertiary text--dancing text--bold">
-              Support On
-            </h3>
             <img
               src={require("../../../assets/images/kickstarter-logo.png")}
               alt="Kickstarter Logo"
@@ -36,6 +33,7 @@ const Header = () => {
             />
           </a>
         </div>
+      
       </div>
     </header>
   );

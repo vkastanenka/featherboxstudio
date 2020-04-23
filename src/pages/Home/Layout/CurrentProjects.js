@@ -13,7 +13,7 @@ const CurrentProjects = () => {
       <div className="current-projects__content">
         <div className="current-projects__information">
           <img
-            src={require("../../../assets/images/forgetmenot/forgetmenot-logo.png")}
+            src={require("../../../assets/images/forgetmenot/forgetmenot-logo--adjusted.png")}
             alt="Game Logo"
             className="current-projects__image"
           />

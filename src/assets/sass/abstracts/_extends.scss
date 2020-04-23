@@ -7,16 +7,29 @@
 
 %hover-shadows {
   transition: all 0.3s;
-  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
 
   &:hover {
     transform: (translateY(-2px));
-    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.1);
   }
 
   &:active {
     transform: (translateY(2px));
-    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.6);
+    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+%hover-shadows-no-translate {
+  transition: all 0.3s;
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.2);
+
+  &:hover {
+    box-shadow: 0px 8px 20px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0px 2px 8px 5px rgba(0, 0, 0, 0.3);
   }
 }
 

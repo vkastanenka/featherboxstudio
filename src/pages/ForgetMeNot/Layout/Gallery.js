@@ -184,8 +184,6 @@ class Gallery extends Component {
       if (nextImageIndex < 0) nextImageIndex = arrayLimit;
     }
 
-    console.log(nextImageIndex);
-
     // Set next image
     this.setState({
       popupImage: gallery[nextImageIndex].large,
@@ -204,11 +202,6 @@ class Gallery extends Component {
       popup = (
         <Popup>
           <div className="gallery__popup">
-            <Icon
-              type="arrow-left-circle"
-              className="icon icon--massive icon--white-blue icon--active"
-              onClick={() => this.changePopupImage("backwards")}
-            />
             <div className="gallery__popup-image-container">
               <Icon
                 type="x-circle"
@@ -217,11 +210,18 @@ class Gallery extends Component {
               />
               {popupImage}
             </div>
-            <Icon
-              type="arrow-right-circle"
-              className="icon icon--massive icon--white-blue icon--active"
-              onClick={() => this.changePopupImage("forwards")}
-            />
+            <div className="gallery__popup-icon-container">
+              <Icon
+                type="arrow-left-circle"
+                className="icon icon--massive icon--white-blue icon--active"
+                onClick={() => this.changePopupImage("backwards")}
+              />
+              <Icon
+                type="arrow-right-circle"
+                className="icon icon--massive icon--white-blue icon--active"
+                onClick={() => this.changePopupImage("forwards")}
+              />
+            </div>
           </div>
         </Popup>
       );
@@ -293,7 +293,8 @@ class Gallery extends Component {
         <section className="gallery gallery--forgetmenot" id="gallery">
           <Heading title="Gallery" />
           <div className="gallery__content">
-            <div className="gallery__gallery">
+            <div className="gallery__gallery">{galleryImages}</div>
+            <div className="gallery__show-gallery-page-container">
               <Icon
                 type="arrow-left-circle"
                 className="icon icon--larger icon--black-blue icon--active"
@@ -303,18 +304,6 @@ class Gallery extends Component {
                   }))
                 }
               />
-              {galleryImages}
-              <Icon
-                type="arrow-right-circle"
-                className="icon icon--larger icon--black-blue icon--active"
-                onClick={() =>
-                  this.setState((prevState) => ({
-                    galleryPage: prevState.galleryPage === 1 ? 2 : 1,
-                  }))
-                }
-              />
-            </div>
-            <div className="gallery__show-gallery-page-container">
               <div
                 className={
                   galleryPage === 1 ? galleryPageActiveClass : galleryPageClass
@@ -325,6 +314,15 @@ class Gallery extends Component {
                   galleryPage === 2 ? galleryPageActiveClass : galleryPageClass
                 }
               />
+              <Icon
+                type="arrow-right-circle"
+                className="icon icon--larger icon--black-blue icon--active"
+                onClick={() =>
+                  this.setState((prevState) => ({
+                    galleryPage: prevState.galleryPage === 1 ? 2 : 1,
+                  }))
+                }
+              />
             </div>
             <img
               src={require("../../../assets/images/flower-divider-3.png")}
@@ -333,7 +331,7 @@ class Gallery extends Component {
             />
             <div className="gallery__cast-container">
               <img
-                src={require("../../../assets/images/forgetmenot/entire-cast.png")}
+                src={require("../../../assets/images/forgetmenot/entire-cast--adjusted.png")}
                 alt="Gallery Cast"
                 className="gallery__cast"
               />

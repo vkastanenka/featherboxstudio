@@ -14,11 +14,12 @@ class Navbar extends Component {
   };
 
   render() {
-    const links = this.props.links.map((link) => {
+    const links = this.props.links.map((link, index) => {
       let navLink;
       let projectsDropdown = null;
 
-      if (link.length === 1) {
+      // First index should only have title of the page to scroll to the top
+      if (index === 0) {
         navLink = (
           <li
             key={link[0]}
@@ -28,6 +29,7 @@ class Navbar extends Component {
             {link[0]}
           </li>
         );
+        // For projects link, need dropdown
       } else if (link[0] === "Projects") {
         if (this.state.projectsHover) {
           projectsDropdown = (
@@ -46,7 +48,7 @@ class Navbar extends Component {
               <li className="navbar__dropdown-link text--default text--grey">
                 <Link to="/forgetmenot">Forget Me Not</Link>
                 <img
-                  src={require("../../assets/images/forgetmenot/flower.png")}
+                  src={require("../../assets/images/forgetmenot/flower--icon.png")}
                   alt="flower"
                   className="navbar__dropdown-image"
                 />
@@ -66,11 +68,12 @@ class Navbar extends Component {
             {projectsDropdown}
           </li>
         );
+        // For kickstarter link, need link to outside
       } else if (link[0] === "Kickstarter") {
         navLink = (
           <li key={link[0]} className="navbar__link text--larger">
             <a
-              className='text--white-dark-blue'
+              className="text--white-dark-blue"
               rel="noopener noreferrer"
               target="_blank"
               href={link[1]}
@@ -79,6 +82,7 @@ class Navbar extends Component {
             </a>
           </li>
         );
+        // For every other link, make them smooth scroll to that portion of the page
       } else {
         navLink = (
           <li key={link[0]} className="navbar__link text--larger">
@@ -120,7 +124,7 @@ class Navbar extends Component {
           >
             <Icon
               type="twitter"
-              className="icon icon--larger icon--white-dark-blue icon--active icon--bg-white"
+              className="icon icon--larger icon--white-dark-blue icon--active icon--bg-white navbar__twitter"
             />
           </a>
         </ul>

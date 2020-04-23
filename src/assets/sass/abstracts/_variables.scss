@@ -32,13 +32,19 @@ $nav-padding: 1rem 3rem;
 $section-padding: 5rem 3rem;
 
 // BG
-$polkadot-bg: url('../images/polkadot-background.png');
+$polkadot-bg: url("../images/polkadot-background.png");
+$gradient-bg: linear-gradient(
+  to right bottom,
+  rgba($color-primary-light, 1),
+  rgba($color-primary-dark, 1)
+);
 
 // Box-Shadows
-$shadow-side: 5px 0 15px rgba(0,0,0,0.2), -5px 0 15px rgba(0,0,0,0.2);
-$shadow-bottom: 0px 5px 15px rgba(0,0,0,0.2);
-$shadow-bottom--hover: 0px 10px 20px rgba(0,0,0,0.2);
-$shadow-bottom--active: 0px 2.5px 5px rgba(0,0,0,0.2);
+$shadow-side: 5px 0 15px rgba(0, 0, 0, 0.2), -5px 0 15px rgba(0, 0, 0, 0.2);
+$shadow-bottom: 0px 5px 15px rgba(0, 0, 0, 0.2);
+$shadow-right: 5px 0px 15px rgba(0, 0, 0, 0.2);
+$shadow-bottom--hover: 0px 10px 20px rgba(0, 0, 0, 0.2);
+$shadow-bottom--active: 0px 2.5px 5px rgba(0, 0, 0, 0.2);
 
 // Borders
 $border-bottom-light-grey: 2px solid $color-grey-light;

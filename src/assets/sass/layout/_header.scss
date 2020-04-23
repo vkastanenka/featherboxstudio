@@ -1,0 +1,117 @@
+.header {
+  &--home {
+    text-align: center;
+    padding: $section-padding;
+
+    &__main {
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      top: -2rem;
+
+      & > :last-child {
+        opacity: 0;
+        transform: translateX(-20%);
+        animation: 1s appearFromLeft linear forwards;
+        animation-delay: 1.5s;
+        position: relative;
+        z-index: 4;
+
+        // @include respond(bp-medium) {
+        //   animation: 1s appearFromBottom linear forwards;
+        //   animation-delay: 1.5s;
+        // }
+      }
+
+      @include respond(bp-largest) {
+        top: 0;
+      }
+
+      @include respond(bp-medium) {
+        flex-direction: column;
+      }
+    }
+
+    &__logo {
+      animation: 2s appear linear;
+      position: relative;
+      z-index: 5;
+      margin-right: 3rem;
+      height: 30rem;
+
+      @include respond(bp-massive-s) {
+        height: 24rem;
+      }
+
+      @include respond(bp-largest) {
+        height: 22rem;
+      }
+
+      @include respond(bp-large) {
+        height: 20rem;
+      }
+
+      @include respond(bp-medium) {
+        height: 22rem;
+        margin-right: 0rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__about {
+      & > :first-child {
+        margin-bottom: 1rem;
+
+        @include respond(bp-small) {
+          margin-bottom: 0;
+        }
+      }
+
+      & > :nth-child(2) {
+        @include respond(bp-small) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &--game {
+    overflow: hidden;
+
+    &__video-container {
+      position: relative;
+    }
+
+    &__video {
+      width: 100%;
+    }
+
+    &__logo {
+      width: 20%;
+      position: absolute;
+      top: 1rem;
+      left: 2rem;
+      opacity: 0.6;
+    }
+
+    &__kickstarter {
+      position: absolute;
+      bottom: 3rem;
+      left: 3rem;
+      opacity: 0.6;
+      transition: all 0.3s;
+      cursor: pointer;
+
+      &:hover {
+        opacity: 1;
+        transform: translateY(-2px) scale(1.02);
+      }
+    }
+
+    &__kickstarter-logo {
+      width: 25%;
+    }
+  }
+}

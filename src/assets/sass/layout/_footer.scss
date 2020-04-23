@@ -1,5 +1,5 @@
 .footer {
-  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 1), rgba($color-primary-dark, 1));
+  background-image: $gradient-bg;
   color: $color-grey-darker;
 
   display: flex;
@@ -8,16 +8,53 @@
 
   padding: $nav-padding;
 
-  &__logo, &__contact {
+  @include respond(bp-small) {
+    justify-content: center;
+  }
+
+  &__logo-container,
+  &__contact {
     display: flex;
     align-items: center;
   }
 
+  &__logo-container {
+    @include respond(bp-small) {
+      display: none;
+    }
+  }
+
   &__logo {
     margin-right: 3rem;
+    height: 7rem;
+
+    @include respond(bp-largest) {
+      margin-right: 2.5rem;
+    }
+
+    @include respond(bp-medium) {
+      margin-right: 2rem;
+    }
+
+    @include respond(bp-small) {
+      margin: 0;
+      height: 0;
+    }
   }
 
   &__contact > :last-child {
     margin-left: 3rem;
+
+    @include respond(bp-largest) {
+      margin-left: 2.5rem;
+    }
+
+    @include respond(bp-medium) {
+      margin-left: 2rem;
+    }
+
+    @include respond(bp-smaller) {
+      margin-left: 1.6rem;
+    }
   }
 }
