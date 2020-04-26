@@ -23,34 +23,34 @@ class GameDetails extends Component {
         <Auxiliary>
           <div className="game-details__detail">
             <span className="text--small">System:</span>
-            <span className="text--small text--grey">Windows 7 TBD</span>
+            <span className="text--small text--grey">Windows (7, 8, 10)</span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Processor:</span>
             <span className="text--small text--grey">
-              Pentium Ⅲ- 500MHz TBD
+              Pentium Ⅲ- 500MHz
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Memory:</span>
-            <span className="text--small text--grey">1 GB RAM TBD</span>
+            <span className="text--small text--grey">1 GB RAM</span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Graphics:</span>
             <span className="text--small text--grey">
-              800x600 Full Color TBD
+              800x600 Full Color
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Storage:</span>
             <span className="text--small text--grey">
-              1100 MB available space TBD
+              TBD
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Sound:</span>
             <span className="text--small text--grey">
-              Direct Sound Compatible TBD
+              Direct Sound Compatible
             </span>
           </div>
         </Auxiliary>
@@ -60,7 +60,7 @@ class GameDetails extends Component {
         <Auxiliary>
           <div className="game-details__detail">
             <span className="text--small">System:</span>
-            <span className="text--small text--grey">OSX 10.11+ TBD</span>
+            <span className="text--small text--grey">OSX 10.11+</span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Processor:</span>
@@ -70,24 +70,24 @@ class GameDetails extends Component {
           </div>
           <div className="game-details__detail">
             <span className="text--small">Memory:</span>
-            <span className="text--small text--grey">1 GB RAM TBD</span>
+            <span className="text--small text--grey">1 GB RAM</span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Graphics:</span>
             <span className="text--small text--grey">
-              800x600 Full Color TBD
+              800x600 Full Color
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Storage:</span>
             <span className="text--small text--grey">
-              1100 MB available space TBD
+              TBD
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Sound:</span>
             <span className="text--small text--grey">
-              Direct Sound Compatible TBD
+              Direct Sound Compatible
             </span>
           </div>
         </Auxiliary>
@@ -97,7 +97,7 @@ class GameDetails extends Component {
         <Auxiliary>
           <div className="game-details__detail">
             <span className="text--small">System:</span>
-            <span className="text--small text--grey">Ubuntu 16.04+ TBD</span>
+            <span className="text--small text--grey">Ubuntu 16.04+</span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Processor:</span>
@@ -110,19 +110,19 @@ class GameDetails extends Component {
           <div className="game-details__detail">
             <span className="text--small">Graphics:</span>
             <span className="text--small text--grey">
-              800x600 Full Color TBD
+              800x600 Full Color
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Storage:</span>
             <span className="text--small text--grey">
-              1100 MB available space TBD
+              TBD
             </span>
           </div>
           <div className="game-details__detail">
             <span className="text--small">Sound:</span>
             <span className="text--small text--grey">
-              Direct Sound Compatible TBD
+              Direct Sound Compatible
             </span>
           </div>
         </Auxiliary>
@@ -240,7 +240,7 @@ class GameDetails extends Component {
                   <span className="text--small">Works on:</span>
                   <span className="text--small text--grey">
                     Windows (7, 8, 10), Linux (Ubuntu 16.04, Ubuntu 18.04), Mac
-                    OS X (10.11+) TBD
+                    OS X (10.11+)
                   </span>
                 </div>
                 <div className="game-details__detail">
