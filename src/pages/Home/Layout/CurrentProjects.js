@@ -8,7 +8,7 @@ import Heading from "../../../components/Heading/Heading";
 // Section detailing the current projects being worked ou by the studio
 const CurrentProjects = () => {
   return (
-    <section className="current-projects" id='current-projects'>
+    <section className="current-projects" id="current-projects">
       <Heading title="Current Projects" />
       <div className="current-projects__content">
         <div className="current-projects__information">
@@ -21,10 +21,11 @@ const CurrentProjects = () => {
             Can forgotten love still bloom?
           </h2>
           <p className="text--large">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
-            dolor doloremque ratione odit quidem culpa? Repudiandae, eaque
-            obcaecati quae sit quis dolore beatae nam impedit iste aliquid
-            consequuntur nihil cum!
+            Iris had never planned for her life to end up so mundane. Graduating
+            and immediately taking her first job offer, she soon discovers she
+            would be getting underpaid and heavily overworked. One day, straying
+            from her auto-piloted route from work to do some errands, she
+            discovers a flower shop...
           </p>
           <Link to="/forgetmenot">
             <button className="text--large btn btn--blue btn--translate">
