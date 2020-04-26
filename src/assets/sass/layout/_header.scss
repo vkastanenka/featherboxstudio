@@ -11,19 +11,19 @@
       position: relative;
       top: -2rem;
 
-      & > :last-child {
-        opacity: 0;
-        transform: translateX(-20%);
-        animation: 1s appearFromLeft linear forwards;
-        animation-delay: 1.5s;
-        position: relative;
-        z-index: 4;
+      // & > :last-child {
+      //   opacity: 0;
+      //   transform: translateX(-20%);
+      //   // animation: 1s appearFromLeft linear forwards;
+      //   // animation-delay: 1.5s;
+      //   position: relative;
+      //   z-index: 4;
 
-        // @include respond(bp-medium) {
-        //   animation: 1s appearFromBottom linear forwards;
-        //   animation-delay: 1.5s;
-        // }
-      }
+      //   // @include respond(bp-medium) {
+      //   //   animation: 1s appearFromBottom linear forwards;
+      //   //   animation-delay: 1.5s;
+      //   // }
+      // }
 
       @include respond(bp-largest) {
         top: 0;
@@ -35,7 +35,7 @@
     }
 
     &__logo {
-      animation: 2s appear linear;
+      // animation: 2s appear linear;
       position: relative;
       z-index: 5;
       margin-right: 3rem;
