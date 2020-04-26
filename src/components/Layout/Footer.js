@@ -1,6 +1,5 @@
 // React
 import React from "react";
-import { Link } from "react-router-dom";
 
 // Components
 import Icon from "../Icon/Icon";
@@ -18,8 +17,11 @@ const Footer = () => {
         <p className="text--larger">Featherbox Studio</p>
       </div>
       <div className="footer__contact">
-        <p className="text--larger">staff@featherboxstudio.com</p>
-        <a
+        {/* <div className="footer__contact-text">
+          <p className="text--larger">staff@featherboxstudio.com</p>
+        </div> */}
+        <p className="text--larger">Website Design by Victoria Kastanenka</p>
+        {/* <a
           rel="noopener noreferrer"
           target="_blank"
           href={"https://twitter.com/Featherboxgames"}
@@ -28,7 +30,7 @@ const Footer = () => {
             type="twitter"
             className="icon icon--larger icon--white-dark-blue icon--active icon--bg-white"
           />
-        </a>
+        </a> */}
       </div>
     </footer>
   );

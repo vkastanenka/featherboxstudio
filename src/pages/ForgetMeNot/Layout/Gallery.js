@@ -16,7 +16,7 @@ class Gallery extends Component {
         large: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-1--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-1.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -24,7 +24,7 @@ class Gallery extends Component {
         small: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-1--small--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-1--small.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -34,7 +34,7 @@ class Gallery extends Component {
         large: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-3--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-2.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -42,7 +42,7 @@ class Gallery extends Component {
         small: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-3--small--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-2--small.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -52,7 +52,7 @@ class Gallery extends Component {
         large: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-5--placeholder.png")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-3.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -60,7 +60,7 @@ class Gallery extends Component {
         small: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-5--small--placeholder.png")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-3--small.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -70,7 +70,7 @@ class Gallery extends Component {
         large: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-7--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-4.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
@@ -78,86 +78,86 @@ class Gallery extends Component {
         small: (
           // eslint-disable-next-line
           <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-7--small--placeholder.jpg")}
+            src={require("../../../assets/images/forgetmenot/gallery/gallery-4--small.jpg")}
             alt="gallery image"
             className="gallery__image"
           />
         ),
       },
-      {
-        large: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-2--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-        small: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-2--small--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-      },
-      {
-        large: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-4--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-        small: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-4--small--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-      },
-      {
-        large: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-6--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-        small: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-6--small--placeholder.png")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-      },
-      {
-        large: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-8--placeholder.jpg")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-        small: (
-          // eslint-disable-next-line
-          <img
-            src={require("../../../assets/images/forgetmenot/gallery/gallery-8--small--placeholder.jpg")}
-            alt="gallery image"
-            className="gallery__image"
-          />
-        ),
-      },
+      // {
+      //   large: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-2--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      //   small: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-2--small--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      // },
+      // {
+      //   large: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-4--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      //   small: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-4--small--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      // },
+      // {
+      //   large: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-6--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      //   small: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-6--small--placeholder.png")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      // },
+      // {
+      //   large: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-8--placeholder.jpg")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      //   small: (
+      //     // eslint-disable-next-line
+      //     <img
+      //       src={require("../../../assets/images/forgetmenot/gallery/gallery-8--small--placeholder.jpg")}
+      //       alt="gallery image"
+      //       className="gallery__image"
+      //     />
+      //   ),
+      // },
     ],
-    galleryPage: 1,
+    // galleryPage: 1,
     popupImage: null,
   };
 
@@ -192,12 +192,12 @@ class Gallery extends Component {
   };
 
   render() {
-    const { gallery, galleryPage, popupImage } = this.state;
+    const { gallery, popupImage } = this.state;
     let popup = null;
-    const galleryPageClass =
-      "gallery__show-gallery-page gallery__show-gallery-page--inactive";
-    const galleryPageActiveClass =
-      "gallery__show-gallery-page gallery__show-gallery-page--active";
+    // const galleryPageClass =
+    //   "gallery__show-gallery-page gallery__show-gallery-page--inactive";
+    // const galleryPageActiveClass =
+    //   "gallery__show-gallery-page gallery__show-gallery-page--active";
 
     if (popupImage) {
       popup = (
@@ -257,36 +257,37 @@ class Gallery extends Component {
       </div>
     );
 
-    if (galleryPage === 2) {
-      galleryImages = (
-        <div className="gallery__images">
-          <div
-            className="gallery__image-container"
-            onClick={() => this.setState({ popupImage: gallery[4].large })}
-          >
-            {gallery[4].small}
-          </div>
-          <div
-            className="gallery__image-container"
-            onClick={() => this.setState({ popupImage: gallery[5].large })}
-          >
-            {gallery[5].small}
-          </div>
-          <div
-            className="gallery__image-container"
-            onClick={() => this.setState({ popupImage: gallery[6].large })}
-          >
-            {gallery[6].small}
-          </div>
-          <div
-            className="gallery__image-container"
-            onClick={() => this.setState({ popupImage: gallery[7].large })}
-          >
-            {gallery[7].small}
-          </div>
-        </div>
-      );
-    }
+    // TODO: When more gallery images added, readd the feature
+    // if (galleryPage === 2) {
+    //   galleryImages = (
+    //     <div className="gallery__images">
+    //       <div
+    //         className="gallery__image-container"
+    //         onClick={() => this.setState({ popupImage: gallery[4].large })}
+    //       >
+    //         {gallery[4].small}
+    //       </div>
+    //       <div
+    //         className="gallery__image-container"
+    //         onClick={() => this.setState({ popupImage: gallery[5].large })}
+    //       >
+    //         {gallery[5].small}
+    //       </div>
+    //       <div
+    //         className="gallery__image-container"
+    //         onClick={() => this.setState({ popupImage: gallery[6].large })}
+    //       >
+    //         {gallery[6].small}
+    //       </div>
+    //       <div
+    //         className="gallery__image-container"
+    //         onClick={() => this.setState({ popupImage: gallery[7].large })}
+    //       >
+    //         {gallery[7].small}
+    //       </div>
+    //     </div>
+    //   );
+    // }
 
     return (
       <Auxiliary>
@@ -295,7 +296,8 @@ class Gallery extends Component {
           <Heading title="Gallery" />
           <div className="gallery__content">
             <div className="gallery__gallery">{galleryImages}</div>
-            <div className="gallery__show-gallery-page-container">
+            {/* TODO: Readd feature when more images available */}
+            {/* <div className="gallery__show-gallery-page-container">
               <Icon
                 type="arrow-left-circle"
                 className="icon icon--larger icon--black-blue icon--active"
@@ -324,7 +326,7 @@ class Gallery extends Component {
                   }))
                 }
               />
-            </div>
+            </div> */}
             <img
               src={require("../../../assets/images/flower-divider-3.png")}
               alt="divider"

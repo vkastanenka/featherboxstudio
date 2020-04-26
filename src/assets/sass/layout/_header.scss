@@ -79,26 +79,41 @@
 
   &--game {
     overflow: hidden;
+    height: 65vh;
+
+    @include respond(bp-small) {
+      height: 40vh;
+    }
+    
+    @include respond(bp-smaller) {
+      height: 32vh;
+    }
+
+    @include respond(bp-smallest) {
+      height: 26vh;
+    }
 
     &__video-container {
       position: relative;
+      height: 100%;
     }
 
     &__video {
       width: 100%;
+      height: 100%;
     }
 
-    &__logo {
-      width: 20%;
-      position: absolute;
-      top: 1rem;
-      left: 2rem;
-      opacity: 0.6;
-    }
+    // &__logo {
+    //   width: 20%;
+    //   position: absolute;
+    //   top: 5rem;
+    //   left: 2rem;
+    //   opacity: 0.6;
+    // }
 
     &__kickstarter {
       position: absolute;
-      bottom: 3rem;
+      bottom: 4rem;
       left: 3rem;
       opacity: 0.6;
       transition: all 0.3s;

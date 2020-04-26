@@ -5,13 +5,9 @@
         rgba($color-primary, 0.4)
       ),
       url("../images/forgetmenot/main-menu--transparent--adjusted.jpg");
-    background-position: 58% 0%;
+    background-position: 65% 0%;
     background-size: cover;
     text-align: center;
-
-    @include respond(bp-massive-s) {
-      background-position: 65% 0%;
-    }
 
     @include respond(bp-largest) {
       background-position: 68% 0%;

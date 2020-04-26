@@ -18,6 +18,12 @@
     align-items: center;
   }
 
+  // &__contact-text {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
   &__logo-container {
     @include respond(bp-small) {
       display: none;
@@ -42,19 +48,21 @@
     }
   }
 
-  &__contact > :last-child {
-    margin-left: 3rem;
+  // &__contact > :last-child {
+  //   margin-left: 3rem;
 
-    @include respond(bp-largest) {
-      margin-left: 2.5rem;
-    }
+  //   @include respond(bp-largest) {
+  //     margin-left: 2.5rem;
+  //   }
 
-    @include respond(bp-medium) {
-      margin-left: 2rem;
-    }
+  //   @include respond(bp-medium) {
+  //     margin-left: 2rem;
+  //   }
 
-    @include respond(bp-smaller) {
-      margin-left: 1.6rem;
-    }
-  }
+  //   @include respond(bp-smaller) {
+  //     // margin-left: 1.6rem;
+  //     margin: 0;
+  //     display: none;
+  //   }
+  // }
 }
