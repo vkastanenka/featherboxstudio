@@ -2,7 +2,7 @@
 import React from "react";
 
 // Components
-import Icon from "../Icon/Icon";
+// import Icon from "../Icon/Icon";
 
 // Footer for every page
 const Footer = () => {
